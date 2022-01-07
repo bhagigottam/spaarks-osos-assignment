@@ -34,11 +34,13 @@ export class HomeComponent implements OnInit {
 contacts:any=[];
 clearallContacts(){
   this.contacts=[];
+  localStorage.setItem("contacts",JSON.stringify(this.contacts));
 }
 
 deletecontact(eve:any){
   let ind = Number(eve);
   this.contacts.splice(ind,1);
+  localStorage.setItem("contacts",JSON.stringify(this.contacts));
 }
 addNewContact(eve:any){
   if(eve.mode=='edit'){
