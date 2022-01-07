@@ -1,0 +1,36 @@
+.homeComponent{
+    border: 1px solid grey;
+    padding: 70px;
+}
+.headcontainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.slidercontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.modalParent{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.815);
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalChild{
+    width: auto;
+    height: auto;
+    background: white;
+    border-radius: 7px;
+    padding: 10px;
+}

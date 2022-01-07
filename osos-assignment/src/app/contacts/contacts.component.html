@@ -1,0 +1,30 @@
+<div class="mainContainer p-4">
+    <div class="d-flex justify-content-between align-items-center px-2 ">
+        <h3>Contacts</h3>
+        <button class="btn btn-sm btn-outline-danger" (click)="clearAll()" >clear all</button>
+    </div>
+
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>S.no</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let contact of contacts;let ind=index;">
+                    <td>{{ind+1}}</td>
+                    <td>{{contact.name|slice:0:14}}</td>
+                    <td>{{contact.phone}}</td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-primary " (click)="editContact(ind)">edit</button> &nbsp;
+                        <button class="btn btn-sm btn-outline-danger" (click)="deleteContact(ind)">delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

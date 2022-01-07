@@ -1,0 +1,22 @@
+<div class="homeComponent">
+    <div class="mainContainer">
+        <div class="headcontainer">
+            <h3>Spaarks Assignment</h3>
+            <p class="m-0">{{myDate| date:'longDate' }}</p>
+        </div>
+<div class="slidercontainer">
+    <app-add-contact (addcontact)="addNewContact($event)"></app-add-contact>
+    <app-contacts (deleteone)="deletecontact($event)" (clearall)="clearallContacts()" [contacts]="contacts"></app-contacts>
+</div>
+
+    </div>
+</div>
+
+
+
+<div class="modalParent" *ngIf="showModal">
+   <div class="modalChild">
+       <!-- reusing add contact component with different output -->
+       <app-add-contact (addcontact)="addNewContact($event)" [editdetailsinput]="editdetails" [mode]="'edit'"></app-add-contact>
+   </div>
+</div>
